@@ -44,15 +44,17 @@ async def on_message(message):
 
     if message.server == None:
         return
-
     
-answer_scores ={"1": 0,
+    if message.content.lower() == "-q":
+       if "554283064822333441" in [role.id for role in message.author.roles]:
+           sent_new_message =False
+           answer_scores = {
+                "1": 0,
                 "2": 0,
                 "3": 0,
-                
-		}
-answer = " "
-wrong = " "
+           }
+           wrong = ""
+           answer = "" 
                
        
     
@@ -89,6 +91,13 @@ async def on_message(message):
             answer_scores["2"] += markscore
         elif content.startswith("3?") or content.startswith("3apg?"):
             answer_scores["3"] += markscore
+        
+        elif content == "w1":
+            answer_scores["1"] += apgscore
+        elif content == "w2":
+            answer_scores["2"] += apgscore
+        elif content == "w3":
+            answer_scores["3"] += apgscore
         
         elif content == "1apg":
             answer_scores["1"] += apgscore
