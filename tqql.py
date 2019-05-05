@@ -5,7 +5,7 @@ import discord
 import asyncio
 
 bot_channel_id = discord.Object(id='557047819832393739')
-oot_channel_id_list = ["557047819832393739","446448458090545172","523359846297239575","513818839008673833"]
+oot_channel_id_list = ["557047819832393739","446448458090545172","523359846297239575","513818839008673833","525131707410677761","523359669280833536","513818250652680213"]
 
 
 sent_new_message = False
@@ -192,7 +192,7 @@ async def discord_send():
                 
                 if not sent_new_message:
                     
-                    embed=discord.Embed(title="THE Q  Q LIVE", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="HQ - THE Q", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
@@ -203,7 +203,7 @@ async def discord_send():
                     sent_new_message = True
                 else:
                     
-                    embed=discord.Embed(title="THE Q  Q LIVE", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="HQ - THE Q", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
