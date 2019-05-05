@@ -39,7 +39,7 @@ async def on_ready():
     
     print("Connected to discord.")
     
-    await bot.send_message(bot_channel_id, "**READY ?```THE Q  Q LIVE TRIVIA```** ")
+    await bot.send_message(bot_channel_id, "**READY ?** ")
    
 
    
@@ -54,7 +54,7 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "-q":
+    if message.content.lower() == "-hqtq":
        if "554283064822333441" in [role.id for role in message.author.roles]:
            sent_new_message =False
            answer_scores = {
