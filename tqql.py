@@ -54,7 +54,7 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "-hqtq":
+    if message.content.lower() == "+s":
        if "554283064822333441" in [role.id for role in message.author.roles]:
            sent_new_message =False
            answer_scores = {
