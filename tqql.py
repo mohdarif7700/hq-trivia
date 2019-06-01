@@ -98,11 +98,11 @@ async def on_message(message):
         elif content.startswith("3?") or content.startswith("3apg?"):
             answer_scores["3"] += markscore
 	
-        elif content == "w1":
+        elif content in ["w1", "ww1"]:
             answer_scores["1"] += apgscore
-        elif content == "w2":
+        elif content in ["w2", "ww2"]:
             answer_scores["2"] += apgscore
-        elif content == "w3":
+        elif content in ["w3", "ww3"]:
             answer_scores["3"] += apgscore
         
         elif content == "1apg":
