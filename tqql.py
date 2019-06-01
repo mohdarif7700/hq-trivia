@@ -5,7 +5,7 @@ import discord
 import asyncio
 
 bot_channel_id = discord.Object(id='557047819832393739')
-oot_channel_id_list = ["557047819832393739","446448458090545172","523359846297239575","513818839008673833","525131707410677761","523359669280833536","513818250652680213"]
+oot_channel_id_list = ["557047819832393739","523359669280833536","580198028950896640","513818250652680213","459842150323060736","535628205139296256"]     
 
 
 sent_new_message = False
@@ -27,7 +27,7 @@ answer_scores_last = {
 #     saving data) must be done before calling this function."""
 #     python = sys.executable
 #     os.execl(python, python, * sys.argv)
-apgscore = 150
+apgscore = 160
 nomarkscore = 80
 markscore = 40
 
@@ -54,7 +54,7 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "+s":
+    if message.content.lower() == "-hq":
        if "554283064822333441" in [role.id for role in message.author.roles]:
            sent_new_message =False
            answer_scores = {
@@ -192,7 +192,7 @@ async def discord_send():
                 
                 if not sent_new_message:
                     
-                    embed=discord.Embed(title="HQ - THE Q", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="HQ TRIVIA", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
