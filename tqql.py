@@ -4,8 +4,8 @@ import discord
 
 import asyncio
 
-bot_channel_id = discord.Object(id='557047819832393739')
-oot_channel_id_list = ["557047819832393739","523359669280833536","580198028950896640","513818250652680213","459842150323060736","535628205139296256"]     
+bot_channel_id = discord.Object(id='586915580830023680')
+oot_channel_id_list = ["586915580830023680","523359669280833536","580198028950896640","513818250652680213","459842150323060736","535628205139296256"]     
 
 
 sent_new_message = False
@@ -55,7 +55,7 @@ async def on_message(message):
     if message.server == None:
         return
     if message.content.lower() == "-hq":
-       if "554283064822333441" in [role.id for role in message.author.roles]:
+       if "586916528151330853" in [role.id for role in message.author.roles]:
            sent_new_message =False
            answer_scores = {
                 "1": 0,
