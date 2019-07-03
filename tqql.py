@@ -4,8 +4,8 @@ import discord
 
 import asyncio
 
-bot_channel_id = discord.Object(id='586915580830023680')
-oot_channel_id_list = ["586915580830023680","523359669280833536","580198028950896640","513818250652680213","459842150323060736","535628205139296256"]     
+bot_channel_id = discord.Object(id='592402832200826881')
+oot_channel_id_list = ["592402832200826881","523359669280833536","580198028950896640","513818250652680213","459842150323060736","535628205139296256"]     
 
 
 sent_new_message = False
@@ -54,8 +54,8 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "-hq":
-       if "586916528151330853" in [role.id for role in message.author.roles]:
+    if message.content.lower() == "-c":
+       if "595997484384518154" in [role.id for role in message.author.roles]:
            sent_new_message =False
            answer_scores = {
                 "1": 0,
@@ -192,23 +192,23 @@ async def discord_send():
                 
                 if not sent_new_message:
                     
-                    embed=discord.Embed(title="HQ Trivia", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="Confetti", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
                     
-                    embed.set_footer(text=f"© MATRICKS GAMING | 7700", icon_url="")
+                    embed.set_footer(text=f"© MATRICKS | 7700", icon_url="")
                    
                     answer_message = await send_embed(bot, embed)
                     sent_new_message = True
                 else:
                     
-                    embed=discord.Embed(title="HQ Trivia", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="Confetti", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
                        
-                    embed.set_footer(text=f"© MATRICKS GAMING | 7700", icon_url="")
+                    embed.set_footer(text=f"© MATRICKS | 7700", icon_url="")
                     x = await edit_embed(bot, answer_message, embed)
                     await bot.add_reaction(x,emoji="✅")
                     await bot.add_reaction(x,emoji="❌")
@@ -222,7 +222,7 @@ async def discord_send():
         await asyncio.sleep(0)
 
 loop = asyncio.get_event_loop()
-loop.create_task(bot.start("NTU3OTEwODMxMjU0MzM5NTk3.D3Sh5w.3Sr9NO-7OOpywmqGiMtw0AVRoqM"))
+loop.create_task(bot.start("NTk1OTk2MDAzMDc3NzE4MDE4.XRzGqg.TtWLY3Cabdad9pdGdFoDc7UAUPY"))
 loop.create_task(selfbot.start("NDcxNzUzNjA2Nzk0NTc1ODky.D3DLjw.r9t-wvWsJq-IJ9Y7PvLU2DJ6_ZE", bot=False))
 
 loop.create_task(discord_send())
