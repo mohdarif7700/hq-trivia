@@ -40,7 +40,7 @@ async def on_ready():
     
     print("Connected to discord.")
     
-    await bot_channel_id.send('**READY ?** ')
+    await bot.send_message(bot_channel_id, "**READY```Bot has updated Start running ```** ")
    
 
    
