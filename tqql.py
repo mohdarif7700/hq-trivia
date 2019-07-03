@@ -52,7 +52,7 @@ async def on_message(message):
     global answer_scores
     global answer_scores_last
 
-    if message.server == None:
+    if message.guild == None:
         return
     if message.content.lower() == "-c":
        if "595997484384518154" in [role.id for role in message.author.roles]:
@@ -78,7 +78,7 @@ async def on_message(message):
     global answer
     global wrong
 
-    if message.server == None:
+    if message.guild == None:
         return
 
    
