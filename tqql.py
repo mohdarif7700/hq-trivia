@@ -193,7 +193,7 @@ async def discord_send():
                 
                 if not sent_new_message:
                     
-                    embed=discord.Embed(title="Confetti", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="	__***HQ US***__", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
@@ -204,7 +204,7 @@ async def discord_send():
                     sent_new_message = True
                 else:
                     
-                    embed=discord.Embed(title="Confetti", description="", color=0xadd8e6)
+                    embed=discord.Embed(title="	__***HQ US***__", description="", color=0xadd8e6)
                     embed.add_field(name="A", value=f"{answer_scores['1']}{one_cross}{one_check}", inline=False)
                     embed.add_field(name="B", value=f"{answer_scores['2']}{two_cross}{two_check}", inline=False)
                     embed.add_field(name="C", value=f"{answer_scores['3']}{three_cross}{three_check}", inline=False)
