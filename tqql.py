@@ -40,7 +40,7 @@ async def on_ready():
     
     print("Connected to discord.")
     
-    await bot.send_message(bot_channel_id, "**READY```Bot has updated Start running ```** ")
+    await bot.send_message(bot_channel_id, "**READY```Bot has updated... Start running ```** ")
    
 
    
@@ -55,7 +55,7 @@ async def on_message(message):
 
     if message.server == None:
         return
-    if message.content.lower() == "-c":
+    if message.content.lower() == "-h":
        if "595997484384518154" in [role.id for role in message.author.roles]:
            sent_new_message =False
            answer_scores = {
